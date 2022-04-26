@@ -1,471 +1,393 @@
+@charset "UTF-8";
 /*******************************************************
 ***************COLOR PALETTE****************************
 **https://colorhunt.co/palette/0820322c394b334756ff4c29*
 ****************************************************  */
-
-
-
 /* ******************************************************************
 ******************************SMARTPHONE***************************** 
 ******************************************************************* */
-
-@media (max-width: 479px)
-{
-
-    /************************* GLOBAL SELECTORS ************************/
-    * {
-        font-family: Poppins, sans-serif;
-        color: #FF4C29;
-        margin:0;
-    }
-    
-    /************************** TAG SELECTORS **************************/
-    html, body{
-        background-color: #082032;
-        height:100%;
-        margin: 2px;
-    }
-    header{
-        background-color: #2C394B;
-        top: 0;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-    }
-    h1{
-        background-color: #2C394B;
-    }
-    
-    aside{
-        background-color: #334756;
-    }
-    span{
-        background-color: #334756;
-        padding: 10px; 
-        margin: 3px;
-        display: inline-block;
-        border-radius: 15px;
-    }
-    span:hover{
-        border: solid 3px;
-        transition: border .1s;
-        cursor: pointer;
-    }
-    footer{
-        background-color: #2C394B;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-    
-    }
-    
-    
-    /**************************** CLASS SELECTORS **********************/
-    
-    /* creo una class para asignar el grid area, en este caso body */
-    .gridArea { 
-        display: grid;                 /* necesario para que sea grid */
-        grid-template-areas:
-        "cabeza"/* fila 1 */
-        "menu" /* fila 2 */
-        "contenidoPrincipal" /* fila 3 */
-        "ContenidoSecundario" /* fila 4 */
-        "publicidad" /* fila 5 */
-        "pie" /* fila 6 */
-        ;
-    
-        /* Asigno tamaño a columnas y filas */
-    
-        grid-template-columns: 100vw;
-        grid-template-rows: auto auto auto auto auto auto;
-        grid-row-gap: 5px;
-    
-    }
-    .flexNav{
-        display:flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-        
-    
-    }
-    .imagenPublicidad{
-        width:50px;
-        height:50px;
-    }
-    .fotoMoto{
-        display: block;
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-    }
-    
-    
-    
-    /************************* ID SELECTORS ****************************/
-    #cabeza{
-        grid-area: cabeza;
-    
-    }
-    #menu{
-        grid-area: menu;
-    
-    }
-    #contenidoPrincipal{
-        grid-area: contenidoPrincipal;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: center;
-        padding: 5px 20px 5px 20px;
-    
-    }
-    #contenidoSecundario{
-        grid-area: contenidoSecundario;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    
-        
-    
-    }
-    #publicidad{
-        grid-area: publicidad;
-        display: flex;
-        flex-flow: column wrap;
-        align-items:center;
-        justify-content: space-between;
-    
-    }
-    #pie{
-        grid-area: pie;
-        display: flex;
-        justify-content:center;
-    
-    }
-    
-    
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ******************************************************************
-******************************TABLET******************************** 
-******************************************************************* */
-
-@media (min-width: 480px) and (max-width: 1023px)
-{
-
-    /************************* GLOBAL SELECTORS ************************/
-    * {
-        font-family: Poppins, sans-serif;
-        color: #FF4C29;
-        margin:0;
-    }
-    
-    /************************** TAG SELECTORS **************************/
-    html, body{
-        background-color: #082032;
-        height:100%;
-    }
-    header{
-        background-color: #2C394B;
-        top: 0;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-    }
-    h1{
-        background-color: #2C394B;
-    }
-    
-    aside{
-        background-color: #334756;
-    }
-    span{
-        background-color: #334756;
-        padding: 10px; 
-        margin: 3px;
-        display: inline-block;
-        border-radius: 15px;
-    }
-    span:hover{
-        border: solid 3px;
-        transition: border .1s;
-        cursor: pointer;
-    }
-    footer{
-        background-color: #2C394B;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-    
-    }
-    
-    
-    /**************************** CLASS SELECTORS **********************/
-    
-    /* creo una class para asignar el grid area, en este caso body */
-    .gridArea { 
-        display: grid;                 /* necesario para que sea grid */
-        grid-template-areas:
-        "cabeza"/* fila 1 */
-        "menu" /* fila 2 */
-        "contenidoPrincipal" /* fila 3 */
-        "ContenidoSecundario" /* fila 4 */
-        "publicidad" /* fila 5 */
-        "pie" /* fila 6 */
-        ;
-    
-        /* Asigno tamaño a columnas y filas */
-    
-        grid-template-columns: 100vw;
-        grid-template-rows: auto auto auto auto auto auto;
-        grid-row-gap: 5px;
-    
-    }
-    .flexNav{
-        display:flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-        
-    
-    }
-    .imagenPublicidad{
-        width:70px;
-        height:70px;
-    }
-    .fotoMoto{
-        border-radius: 15px;
-        border: solid;
-        display: block;
-    }
-
-    .aranceles{
-        padding: 10px;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-
-    }
-    .sugerencia {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-
-    }
-    
-    
-    
-    /************************* ID SELECTORS ****************************/
-    #cabeza{
-        grid-area: cabeza;
-    
-    }
-    #menu{
-        grid-area: menu;
-    
-    }
-    #contenidoPrincipal{
-        grid-area: contenidoPrincipal;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: center;
-        padding: 5px 20px 5px 20px;
-    
-    }
-    #contenidoSecundario{
-        grid-area: contenidoSecundario;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    
-        
-    
-    }
-    #publicidad{
-        grid-area: publicidad;
-        display: flex;
-        flex-flow: row nowrap;
-        align-items:center;
-        justify-content: space-between;
-    
-    }
-    #pie{
-        grid-area: pie;
-        display: flex;
-        justify-content:center;
-    
-    }
-    
-    
-    }
-    
-
-
-
-
-
-
-
-
-
-
-/* ******************************************************************
-******************************DESKTOP******************************** 
-******************************************************************* */
-
-@media (min-width: 1024px)
-{
-
-/************************* GLOBAL SELECTORS ************************/
-* {
+@media (max-width: 479px) {
+  /************************* GLOBAL SELECTORS ************************/
+  * {
     font-family: Poppins, sans-serif;
     color: #FF4C29;
-    margin:0;
-}
+    margin: 0;
+  }
 
-/************************** TAG SELECTORS **************************/
-html, body{
+  /************************** TAG SELECTORS **************************/
+  html, body {
     background-color: #082032;
-    height:100%;
-}
-header{
-    background-image: linear-gradient( to right bottom,#2C394B 30%, #5c6674 70%);
+    height: 100%;
+    margin: 2px;
+  }
+
+  header {
+    background-color: #2C394B;
     top: 0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-}
+  }
 
-aside{
-    background-image: linear-gradient(to bottom, #748c9e 10%, #334756 90%);
-}
+  h1 {
+    background-color: #2C394B;
+  }
 
-
-
-span{
-    padding: 15px 50px 15px 50px;
+  aside {
     background-color: #334756;
+  }
+
+  span {
+    background-color: #334756;
+    padding: 10px;
     margin: 3px;
-    display:block;
+    display: inline-block;
     border-radius: 15px;
-}
-span:hover{
+  }
+
+  span:hover {
     border: solid 3px;
-    transition: border .1s;
+    transition: border 0.1s;
     cursor: pointer;
-    background-image: linear-gradient(to right, #334756 30%, #082032);
-    transition: .1s;
-}
-span:active{
-    background-color: #334756;
-}
-footer{
+  }
+
+  footer {
     background-color: #2C394B;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
 
-
-}
-
-
-/**************************** CLASS SELECTORS **********************/
-
-/* creo una class para asignar el grid area, en este caso body */
-.gridArea { 
-    display: grid;                 /* necesario para que sea grid */
-    grid-template-areas:
-    "cabeza cabeza cabeza" /* fila 1 */
-    "menu contenidoPrincipal publicidad" /* fila 2 */
-    "menu ContenidoSecundario publicidad" /* fila 3 */
-    "pie pie pie" /* fila 4 */
-    ;
-
+  /**************************** CLASS SELECTORS **********************/
+  /* creo una class para asignar el grid area, en este caso body */
+  .gridArea {
+    display: grid;
+    /* necesario para que sea grid */
+    grid-template-areas: "cabeza" "menu" "contenidoPrincipal" "ContenidoSecundario" "publicidad" "pie";
     /* Asigno tamaño a columnas y filas */
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-row-gap: 5px;
+  }
 
-    grid-template-columns: 20vw auto 10vw ;
-    grid-template-rows: 15vh 35vh 45vh 5vh;
+  .flexNav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+  }
 
-}
-.flexNav{
-    display:flex;
-    flex-flow: column nowrap;
+  .imagenPublicidad {
+    width: 50px;
+    height: 50px;
+  }
+
+  .fotoMoto {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /************************* ID SELECTORS ****************************/
+  #cabeza {
+    grid-area: cabeza;
+  }
+
+  #menu {
+    grid-area: menu;
+  }
+
+  #contenidoPrincipal {
+    grid-area: contenidoPrincipal;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px 5px 20px;
+  }
+
+  #contenidoSecundario {
+    grid-area: contenidoSecundario;
+    display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-    
+    align-items: center;
+  }
 
-}
-.imagenPublicidad{
-    width:100px;
-    height:100px;
-}
-.fotoMoto{
-    border-radius: 15px;
-    border: solid;
-}
+  #publicidad {
+    grid-area: publicidad;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-.fotoMoto:hover {
-    transform: scale(1.1, 1.1) ;
-    transition: .5s;
+  #pie {
+    grid-area: pie;
+    display: flex;
+    justify-content: center;
+  }
 }
+/* ******************************************************************
+******************************TABLET******************************** 
+******************************************************************* */
+@media (min-width: 480px) and (max-width: 1023px) {
+  /************************* GLOBAL SELECTORS ************************/
+  * {
+    font-family: Poppins, sans-serif;
+    color: #FF4C29;
+    margin: 0;
+  }
 
-.aranceles {
-    padding: 20px;
-    border: solid;
-    border-style:groove;
-}
+  /************************** TAG SELECTORS **************************/
+  html, body {
+    background-color: #082032;
+    height: 100%;
+  }
 
-.sugerencia {
+  header {
+    background-color: #2C394B;
+    top: 0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-}
+  }
 
-.video{
+  h1 {
+    background-color: #2C394B;
+  }
+
+  aside {
+    background-color: #334756;
+  }
+
+  span {
+    background-color: #334756;
+    padding: 10px;
+    margin: 3px;
+    display: inline-block;
+    border-radius: 15px;
+  }
+
+  span:hover {
+    border: solid 3px;
+    transition: border 0.1s;
+    cursor: pointer;
+  }
+
+  footer {
+    background-color: #2C394B;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /**************************** CLASS SELECTORS **********************/
+  /* creo una class para asignar el grid area, en este caso body */
+  .gridArea {
+    display: grid;
+    /* necesario para que sea grid */
+    grid-template-areas: "cabeza" "menu" "contenidoPrincipal" "ContenidoSecundario" "publicidad" "pie";
+    /* Asigno tamaño a columnas y filas */
+    grid-template-columns: 100vw;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-row-gap: 5px;
+  }
+
+  .flexNav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+  }
+
+  .imagenPublicidad {
+    width: 70px;
+    height: 70px;
+  }
+
+  .fotoMoto {
     border-radius: 15px;
     border: solid;
-}
+    display: block;
+  }
 
+  .aranceles {
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .sugerencia {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
 
-
-/************************* ID SELECTORS ****************************/
-#cabeza{
+  /************************* ID SELECTORS ****************************/
+  #cabeza {
     grid-area: cabeza;
+  }
 
-}
-#menu{
+  #menu {
     grid-area: menu;
+  }
 
+  #contenidoPrincipal {
+    grid-area: contenidoPrincipal;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 20px 5px 20px;
+  }
+
+  #contenidoSecundario {
+    grid-area: contenidoSecundario;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #publicidad {
+    grid-area: publicidad;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #pie {
+    grid-area: pie;
+    display: flex;
+    justify-content: center;
+  }
 }
-#contenidoPrincipal{
+/* ******************************************************************
+******************************DESKTOP******************************** 
+******************************************************************* */
+@media (min-width: 1024px) {
+  /************************* GLOBAL SELECTORS ************************/
+  * {
+    font-family: Poppins, sans-serif;
+    color: #FF4C29;
+    margin: 0;
+  }
+
+  /************************** TAG SELECTORS **************************/
+  html, body {
+    background-color: #082032;
+    height: 100%;
+  }
+
+  header {
+    background-image: linear-gradient(to right bottom, #2C394B 30%, #5c6674 70%);
+    top: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  aside {
+    background-image: linear-gradient(to bottom, #748c9e 10%, #334756 90%);
+  }
+
+  span {
+    padding: 15px 50px 15px 50px;
+    background-color: #334756;
+    margin: 3px;
+    display: block;
+    border-radius: 15px;
+  }
+
+  span:hover {
+    border: solid 3px;
+    transition: border 0.1s;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #334756 30%, #082032);
+    transition: 0.1s;
+  }
+
+  span:active {
+    background-color: #334756;
+  }
+
+  footer {
+    background-color: #2C394B;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /**************************** CLASS SELECTORS **********************/
+  /* creo una class para asignar el grid area, en este caso body */
+  .gridArea {
+    display: grid;
+    /* necesario para que sea grid */
+    grid-template-areas: "cabeza cabeza cabeza" "menu contenidoPrincipal publicidad" "menu ContenidoSecundario publicidad" "pie pie pie";
+    /* Asigno tamaño a columnas y filas */
+    grid-template-columns: 20vw auto 10vw;
+    grid-template-rows: 15vh 35vh 45vh 5vh;
+  }
+
+  .flexNav {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+  }
+
+  .imagenPublicidad {
+    width: 100px;
+    height: 100px;
+  }
+
+  .fotoMoto {
+    border-radius: 15px;
+    border: solid;
+  }
+
+  .fotoMoto:hover {
+    transform: scale(1.1, 1.1);
+    transition: 0.5s;
+  }
+
+  .aranceles {
+    padding: 20px;
+    border: solid;
+    border-style: groove;
+  }
+
+  .sugerencia {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .video {
+    border-radius: 15px;
+    border: solid;
+  }
+
+  /************************* ID SELECTORS ****************************/
+  #cabeza {
+    grid-area: cabeza;
+  }
+
+  #menu {
+    grid-area: menu;
+  }
+
+  #contenidoPrincipal {
     grid-area: contenidoPrincipal;
     display: flex;
     flex-flow: column nowrap;
@@ -474,32 +396,29 @@ footer{
     padding: 10px 40px 10px 40px;
     height: 30vh;
     overflow: clip;
+  }
 
-}
-#contenidoSecundario{
+  #contenidoSecundario {
     grid-area: contenidoSecundario;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+  }
 
-    
-
-}
-#publicidad{
+  #publicidad {
     grid-area: publicidad;
     display: flex;
     flex-flow: column nowrap;
-    align-items:center;
+    align-items: center;
     justify-content: space-between;
+  }
 
-}
-#pie{
+  #pie {
     grid-area: pie;
     display: flex;
-    justify-content:center;
-
+    justify-content: center;
+  }
 }
 
-
-}
+/*# sourceMappingURL=styles.css.map */
