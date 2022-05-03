@@ -1,0 +1,7 @@
+Cambios hechos para entrega: 
+
+ - Agregados Meta data: descripción y Keywords en los headers.
+ - Agregados Mixins: Se agregaron mixins a lo largo de todo el código (muy buena herramienta)
+ - Agregado Extend: No encontré muchos usos para el extend dentro de mi código, sólo lo implemente en las clases .video y .aranceles en las líneas 416, 417, 418 y 419 del SCSS
+ - Agregado Map y Map-get: Se agrego al principio del SCSS un map $palette con los colores que fueron usados dentro del código, sin embargo sólo implemente el map-get en pocas 
+líneas del código ya que los colores los tenía en variables, y me pareció más simple llamar directamente la variable.

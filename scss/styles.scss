@@ -7,6 +7,15 @@ $colorSecundario: #2C394B;
 $colorTerciario: #334756;
 $colorTexto: #FF4C29;
 
+$palette: (principal:$colorPrincipal, secundario:$colorSecundario, terciario:$colorTerciario, texto:$colorTexto);
+
+@mixin flexes ($flow,$juco, $alit){
+    display: flex;
+    flex-flow: $flow;
+    justify-content: $juco;
+    align-items: $alit;
+}
+
 
 /* ******************************************************************
 ******************************SMARTPHONE***************************** 
@@ -31,10 +40,7 @@ $colorTexto: #FF4C29;
     header{
         background-color: $colorSecundario;
         top: 0;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
+        @include flexes(column nowrap, center, center);
     }
     h1{
         background-color: $colorSecundario;
@@ -58,9 +64,7 @@ $colorTexto: #FF4C29;
     footer{
         background-color: $colorSecundario;
         width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flexes(column nowrap, center, center);
     
     
     }
@@ -88,10 +92,7 @@ $colorTexto: #FF4C29;
     
     }
     .flexNav{
-        display:flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-        
+        @include flexes(row nowrap, space-evenly, center);
     
     }
     .imagenPublicidad{
@@ -118,29 +119,20 @@ $colorTexto: #FF4C29;
     }
     #contenidoPrincipal{
         grid-area: contenidoPrincipal;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: center;
+        @include flexes(row wrap, center, center);
         padding: 5px 20px 5px 20px;
     
     }
     #contenidoSecundario{
         grid-area: contenidoSecundario;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        @include flexes(column nowrap, flex-start, center);
     
         
     
     }
     #publicidad{
         grid-area: publicidad;
-        display: flex;
-        flex-flow: column wrap;
-        align-items:center;
-        justify-content: space-between;
+        @include flexes(column wrap, space-between, center);
     
     }
     #pie{
@@ -190,10 +182,7 @@ $colorTexto: #FF4C29;
     header{
         background-color: $colorSecundario;
         top: 0;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
+        @include flexes(column nowrap, center, center);
     }
     h1{
         background-color: $colorSecundario;
@@ -217,10 +206,7 @@ $colorTexto: #FF4C29;
     footer{
         background-color: $colorSecundario;
         width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
+        @include flexes( row wrap, center, center);
     
     }
     
@@ -247,9 +233,7 @@ $colorTexto: #FF4C29;
     
     }
     .flexNav{
-        display:flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
+        @include flexes( row nowrap, space-evenly, center);
         
     
     }
@@ -265,17 +249,11 @@ $colorTexto: #FF4C29;
 
     .aranceles{
         padding: 10px;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
+        @include flexes( column nowrap, center, center);
 
     }
     .sugerencia {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
+        @include flexes (column nowrap, center, center);
 
     }
     
@@ -292,29 +270,19 @@ $colorTexto: #FF4C29;
     }
     #contenidoPrincipal{
         grid-area: contenidoPrincipal;
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: center;
+        @include flexes (column wrap, center, center);
         padding: 5px 20px 5px 20px;
     
     }
     #contenidoSecundario{
         grid-area: contenidoSecundario;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    
+        @include flexes (column wrap, center, center);
         
     
     }
     #publicidad{
         grid-area: publicidad;
-        display: flex;
-        flex-flow: row nowrap;
-        align-items:center;
-        justify-content: space-between;
+        @include flexes (column wrap, space-between, center);
     
     }
     #pie{
@@ -347,7 +315,7 @@ $colorTexto: #FF4C29;
 /************************* GLOBAL SELECTORS ************************/
 * {
     font-family: Poppins, sans-serif;
-    color: $colorTexto;
+    color: map-get($palette,texto);
     margin:0;
 }
 
@@ -359,10 +327,7 @@ html, body{
 header{
     background-image: linear-gradient( to right bottom,$colorSecundario 30%, #5c6674 70%);
     top: 0;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    @include flexes (column nowrap, center, center);
 }
 
 aside{
@@ -438,22 +403,19 @@ footer{
     transition: .5s;
 }
 
-.aranceles {
-    padding: 20px;
-    border: solid;
-    border-style:groove;
-}
-
 .sugerencia {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    @include flexes (column nowrap, center, center);
 }
 
 .video{
     border-radius: 15px;
     border: solid;
+}
+
+
+.aranceles {
+    @extend .video;
+    border-style:groove;
 }
 
 
@@ -470,10 +432,7 @@ footer{
 }
 #contenidoPrincipal{
     grid-area: contenidoPrincipal;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
+    @include flexes (column nowrap, center, center);
     padding: 10px 40px 10px 40px;
     height: 30vh;
     overflow: clip;
@@ -481,20 +440,14 @@ footer{
 }
 #contenidoSecundario{
     grid-area: contenidoSecundario;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    @include flexes (column, flex-start, center);
 
     
 
 }
 #publicidad{
     grid-area: publicidad;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items:center;
-    justify-content: space-between;
+    @include flexes (column nowrap, space-between, center);
 
 }
 #pie{
@@ -503,6 +456,7 @@ footer{
     justify-content:center;
 
 }
+
 
 
 }
